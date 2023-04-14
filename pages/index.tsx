@@ -33,13 +33,10 @@ export default function Home() {
         )}
         {gameStarted && (
           <>
-            <Image
+            <img
               src={questionsList[stage].imageUrl}
               key={questionsList[stage].imageUrl}
-              priority={true}
               alt="Question"
-              width={500}
-              height={500}
               className="w-1/4 mb-8"
             />
             {!showAnswer ? (
