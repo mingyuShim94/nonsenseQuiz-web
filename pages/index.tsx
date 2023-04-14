@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import questionsList from "@/public/questionsList";
+import Image from "next/image";
 
 export default function Home() {
   const [gameStarted, setGameStarted] = useState(false);
@@ -32,9 +33,12 @@ export default function Home() {
         )}
         {gameStarted && (
           <>
-            <img
+            <Image
               src={questionsList[stage].imageUrl}
+              key={questionsList[stage].imageUrl}
               alt="Question"
+              width={500}
+              height={500}
               className="w-1/4 mb-8"
             />
             {!showAnswer ? (
