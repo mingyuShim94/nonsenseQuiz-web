@@ -36,7 +36,7 @@ export default function Home() {
             <Image
               src={questionsList[stage].imageUrl}
               key={questionsList[stage].imageUrl}
-              priority
+              priority={true}
               alt="Question"
               width={500}
               height={500}
