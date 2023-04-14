@@ -1,17 +1,17 @@
 export default [
   {
     answer: "불매운동",
-    imageUrl: "/images/1-min.png",
+    imageUrl: "/quizImg/1.avif",
     hint: "ㅂㅁㅇㄷ",
   },
   {
     answer: "다이소",
-    imageUrl: "/images/2-min.png",
+    imageUrl: "/quizImg/2.avif",
     hint: "ㄷㅇㅅ",
   },
   {
     answer: "다이아몬드",
-    imageUrl: "/images/3-min.png",
+    imageUrl: "/quizImg/3.avif",
     hint: "ㄷㅇㅇㅁㄷ",
   },
   {
