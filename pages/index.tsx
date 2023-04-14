@@ -5,7 +5,7 @@ import questionsList from "@/public/questionsList";
 export default function Home() {
   const [gameStarted, setGameStarted] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [stage, setStage] = useState(19);
+  const [stage, setStage] = useState(0);
 
   const handleStartGame = () => {
     setGameStarted(true);
