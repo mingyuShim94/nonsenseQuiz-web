@@ -32,7 +32,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center h-screen ">
         {!gameStarted && (
           <>
-            <h1 className="lg:text-5xl font-bold mb-8 md:text-3xl">
+            <h1 className="lg:text-5xl font-bold mb-8 text-3xl">
               Ai로 만든 넌센스그림퀴즈
             </h1>
             <button
