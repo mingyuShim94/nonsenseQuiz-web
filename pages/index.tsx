@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import questionsList from "@/public/questionsList";
-import Image from "next/image";
+import NextImage from "next/image";
 
 export default function Home() {
   const [gameStarted, setGameStarted] = useState(false);
@@ -10,8 +10,16 @@ export default function Home() {
 
   const handleStartGame = () => {
     setGameStarted(true);
+    const img = new Image();
+    img.src = questionsList[stage + 1].imageUrl;
   };
 
+  const handleNextGame = () => {
+    const img = new Image();
+    img.src = questionsList[stage + 2].imageUrl;
+    setShowAnswer(false);
+    setStage((prev) => prev + 1);
+  };
   return (
     <div>
       <Head>
@@ -33,14 +41,13 @@ export default function Home() {
         )}
         {gameStarted && (
           <>
-            <Image
+            <NextImage
               src={questionsList[stage].imageUrl}
               key={questionsList[stage].imageUrl}
               priority={true}
               alt="Question"
               width={500}
               height={500}
-              loading="eager"
               className="w-1/4 mb-8"
             />
             {!showAnswer ? (
@@ -73,10 +80,7 @@ export default function Home() {
                 ) : (
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => {
-                      setShowAnswer(false);
-                      setStage((prev) => prev + 1);
-                    }}
+                    onClick={handleNextGame}
                   >
                     다음문제
                   </button>
