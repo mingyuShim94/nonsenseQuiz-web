@@ -13,8 +13,10 @@ export default function Home() {
   };
 
   const handleNextGame = () => {
-    const img = new Image();
-    img.src = questionsList[stage + 2].imageUrl;
+    if (stage != questionsList.length - 2) {
+      const img = new Image();
+      img.src = questionsList[stage + 2].imageUrl;
+    }
     setShowAnswer(false);
     setStage((prev) => prev + 1);
   };
@@ -25,7 +27,7 @@ export default function Home() {
     img.src = questionsList[stage + 1].imageUrl;
   }, []);
   return (
-    <div>
+    <div className="bg-amber-100 h-screen">
       <Head>
         <title>Ai로 만든 넌센스그림퀴즈</title>
       </Head>

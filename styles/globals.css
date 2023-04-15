@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-100 h-full;
+  @apply bg-zinc-500 h-full;
 }
 
 #__next {
