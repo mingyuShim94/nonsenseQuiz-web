@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import questionsList from "@/public/questionsList";
 import NextImage from "next/image";
 
@@ -10,8 +10,6 @@ export default function Home() {
 
   const handleStartGame = () => {
     setGameStarted(true);
-    const img = new Image();
-    img.src = questionsList[stage + 1].imageUrl;
   };
 
   const handleNextGame = () => {
@@ -20,6 +18,12 @@ export default function Home() {
     setShowAnswer(false);
     setStage((prev) => prev + 1);
   };
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = questionsList[stage].imageUrl;
+    img.src = questionsList[stage + 1].imageUrl;
+  }, []);
   return (
     <div>
       <Head>
