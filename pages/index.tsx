@@ -50,9 +50,9 @@ export default function Home() {
               key={questionsList[stage].imageUrl}
               priority={true}
               alt="Question"
-              width={500}
-              height={500}
-              className="w-1/4 mb-8"
+              width={400}
+              height={400}
+              className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
             />
             {!showAnswer ? (
               <>
@@ -75,7 +75,7 @@ export default function Home() {
               <>
                 <div className="flex items-center justify-center mb-8">
                   <span className="text-xl font-bold mr-2">정답:</span>
-                  <span className="text-3xl font-bold text-green-500 mb-1">
+                  <span className="text-3xl font-bold text-green-500 mb-2">
                     {questionsList[stage].answer}
                   </span>
                 </div>
